@@ -49,5 +49,9 @@ jobs:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
         run: |
           echo "env $TEST_SECRET"
-        # use `with` instead of `env` for action XXX
+        # use `with` instead of `env` for action
+      - name: Test env secrets
+        env:
+          TEST_SECRET: ${{ secrets.ENV_TEST_SECRET }}
+        run: echo "test env $TEST_SECRET"
   
