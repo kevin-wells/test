@@ -48,6 +48,6 @@ jobs:
         env:
           TEST_SECRET: ${{ secrets.TEST_SECRET }}
         run: |
-          echo "env $env:TEST_SECRET"
+          echo "env $TEST_SECRET"
         # use `with` instead of `env` for action
   
