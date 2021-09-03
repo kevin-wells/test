@@ -17,11 +17,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    # .NET 5.x preinstalled on ubuntu-20.04 https://github.com/actions/virtual-environments/blob/main/images/linux/Ubuntu2004-README.md
-    #- name: Setup .NET
-    #  uses: actions/setup-dotnet@v1
-    #  with:
-    #    dotnet-version: 5.0.x
+    - uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
